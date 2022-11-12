@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -u
+
+function run() {
+  printf '## `%s`\n' "`echo $@`"
+  #echo "$@" | sed -e 's/^/## `/' -e 's/$/`/'
+  echo '```'
+  target/debug/$@ 2>&1
+  echo '```'
+  echo
+}
+
+cargo b
+
+(
+  run docker --help
+  run docker image inspect
+  run docker image ls
+) > README.md
+
