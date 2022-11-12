@@ -32,3 +32,8 @@ For more information try --help
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```
 
+## `docker run foo`
+```
+docker run "foo"
+```
+

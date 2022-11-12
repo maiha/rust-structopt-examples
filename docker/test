@@ -17,5 +17,6 @@ cargo b
   run docker --help
   run docker image inspect
   run docker image ls
+  run docker run foo
 ) > README.md
 
